@@ -1,0 +1,13 @@
+---
+title:
+- type: main
+  text: LeetCode
+- type: subtitle
+  text: java&rust
+creator:
+- role: author
+  text: Oliver
+- role: editor
+  text: Oliver
+publisher:  My Press
+rights: https://github.com/youngyangyang04/leetcode-master
