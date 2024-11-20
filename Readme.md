@@ -19,17 +19,24 @@ For installing the pandoc, please refer https://pandoc.org/installing.html.
 If you want to generate the thin version of the [leet-code](https://github.com/youngyangyang04/leetcode-master), please follow below guideline:
 
 1. Remove the unnecessary code block. Please note that the CPP code clock is hard to remove due to the book mainly use CPP to solve the problems.
-	```python
+
+```python
 	python3 filter_code_block.py problems problems_out "python,Go,javascript,typescript,swift,csharp,c,scala,ruby,cs,js,kotlin,cangjie,ts,php,dart"
 ```
-    As I mainly focus on the java and Rust learning, so I remove others from java and Rust. You could set the removal variable accordingly.
-    
-2. [Optional] Download all PNG to local folder and convert the linkage to local.
-     ```bash
+
+As I mainly focus on the java and Rust learning, so I remove others from java and Rust. You could set the removal variable accordingly.
+
+2. Optional - Download all PNG to local folder and convert the linkage to local.
+
+```bash
      sh convert-media.sh
 ```
+   
    The convert-media.sh would convert all the MD files even in the sub-folder and download all the images in the "media" folder.
+
 3. Run the pandoc command and send the epub book to Kindle via Calibre.
-	 ```bash
+
+```bash
 	 pandoc -o leet-code-thin.epub --verbose --metadata-file=./title.txt --toc=true --toc-depth=1 --highlight-style=monochrome **/*.md
 ```
+
